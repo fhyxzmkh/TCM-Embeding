@@ -1,0 +1,33 @@
+import os
+from building import *
+
+root = Dir('#').abspath
+libraries = os.path.abspath(os.path.join(root, '..', '..', 'libraries'))
+deepcraft = os.path.join(libraries, 'Common', 'deepcraft_ai')
+middleware = os.path.join(deepcraft, 'third_party', 'ml-middleware')
+tflm = os.path.join(deepcraft, 'third_party', 'ml-tflite-micro', 'COMPONENT_ML_TFLM')
+ethosu = os.path.join(libraries, 'components', 'mtb-device-support-pse8xxgp',
+                      'pdl', 'drivers', 'third_party', 'COMPONENT_U55')
+
+group = DefineGroup(
+    'TCMStaticProbe',
+    ['probe.cpp', 'assets.S', os.path.join(middleware, 'source', 'mtb_ml.c'),
+     os.path.join(middleware, 'source', 'COMPONENT_U55', 'mtb_ml_ethosu.c')],
+    depend=[''],
+    CPPPATH=[GetCurrentDir(), os.path.join(middleware, 'include'),
+             os.path.join(middleware, 'source'),
+             os.path.join(middleware, 'source', 'COMPONENT_ML_TFLM'), os.path.join(tflm, 'include'),
+             os.path.join(tflm, 'include', 'flatbuffers', 'include'),
+             os.path.join(tflm, 'include', 'gemmlowp'),
+             os.path.join(tflm, 'include', 'gemmlowp', 'fixedpoint'),
+             os.path.join(tflm, 'include', 'ethos-u-core-driver'),
+             os.path.join(ethosu, 'include'), os.path.join(ethosu, 'src')],
+    CPPDEFINES=['COMPONENT_CM55', 'COMPONENT_CM55_0', 'COMPONENT_ML_INT8x8',
+                'COMPONENT_ML_TFLM', 'COMPONENT_U55', 'ETHOSU55', 'TF_LITE_STATIC_MEMORY',
+                'TF_LITE_STRIP_ERROR_STRINGS'],
+    LOCAL_CXXFLAGS=' -std=gnu++17 -fno-exceptions -fno-rtti',
+    LIBPATH=[os.path.join(tflm, 'COMPONENT_U55', 'TOOLCHAIN_GCC_ARM')],
+    LIBS=['tensorflow-microlite', 'stdc++'],
+)
+
+Return('group')

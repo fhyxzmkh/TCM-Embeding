@@ -1,0 +1,43 @@
+{
+  "policy": "Manual image-content review before training; exclude prominent class-name text, advertising layouts, heavy watermarks, fresh plant material, and uncertain identity from supplemental training only. Do not rewrite labels or remove held-out images based on appearance or model performance. Small incidental watermarks may remain.",
+  "related_scene_groups": [
+    ["train/39/202.jpg", "test/39/231.jpg"],
+    ["train/39/10.jpg", "train/39/263.jpg"]
+  ],
+  "related_scene_note": "Manual side-by-side review: the same arranged fruit pile and container photographed with different framing/viewpoints. Conservatively group these as a shared scene; this is not a claim of identical pixels.",
+  "flags": {
+    "train/39/1.jpg": "advertising layout and prominent class name",
+    "train/39/164.jpg": "prominent class-name overlay",
+    "train/39/175.jpg": "advertising banner",
+    "train/39/200.jpg": "prominent class-name overlay",
+    "train/39/252.jpg": "prominent class-name overlay",
+    "train/39/256.jpg": "prominent class-name overlay",
+    "train/39/257.jpg": "prominent class-name overlay",
+    "train/39/258.jpg": "advertising layout",
+    "train/39/259.jpg": "fresh fruit attached to plant; dry-material task mismatch",
+    "train/58/1.jpg": "prominent class-name overlay",
+    "train/58/103.jpg": "advertising layout",
+    "train/58/115.jpg": "advertising layout with price",
+    "train/58/142.jpg": "prominent class-name overlay",
+    "train/58/149.jpg": "prominent class-name overlay",
+    "train/58/152.jpg": "prominent class-name overlay",
+    "train/58/159.jpg": "advertising layout and prominent class name",
+    "train/58/163.jpg": "advertising layout and prominent class name",
+    "train/58/168.jpg": "advertising layout and prominent class name",
+    "train/58/178.jpg": "large central branding overlay",
+    "train/58/194.jpg": "prominent class-name overlay",
+    "train/58/39.jpg": "advertising layout and prominent class name",
+    "train/58/43.jpg": "prominent class-name overlay",
+    "train/58/60.jpg": "prominent class-name overlay",
+    "train/100/cgcjyfyj (35).jpg": "large branding overlay",
+    "train/100/cgcjyfyj (46).jpg": "heavy central stock watermark",
+    "train/100/cgcjyfyj (83).jpg": "heavy central stock watermark",
+    "train/100/u=1184938593,105751252&fm=26&gp=0.jpg": "advertising layout",
+    "train/100/u=1186169160,2824052750&fm=26&gp=0.jpg": "advertising text layout",
+    "train/100/u=2079539937,4133972520&fm=26&gp=0.jpg": "advertising header",
+    "train/100/u=2381504450,2732180511&fm=26&gp=0.jpg": "heavy central stock watermark",
+    "train/100/u=2400781990,3821537313&fm=26&gp=0.jpg": "uncertain identity; quarantine without relabeling",
+    "train/100/u=4155959518,1085309618&fm=26&gp=0.jpg": "prominent class-name overlay and advertising text",
+    "train/100/u=56413323,317929389&fm=26&gp=0.jpg": "prominent class-name overlay and advertising text"
+  }
+}

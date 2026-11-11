@@ -1,0 +1,21 @@
+# Packages local to .venv-int8; inherit conda common via --system-site-packages.
+absl-py==2.5.1
+astunparse==1.6.3
+flatbuffers==25.12.19
+gast==0.7.0
+google-pasta==0.2.0
+h5py==3.16.0
+keras==3.15.1
+libclang==18.1.1
+Markdown==3.11.2
+ml_dtypes==0.6.0
+namex==0.1.0
+opt_einsum==3.4.0
+optree==0.20.0
+protobuf==7.36.2
+tensorboard==2.20.0
+tensorboard-data-server==0.7.2
+tensorflow_cpu==2.20.0
+termcolor==3.3.0
+Werkzeug==3.1.9
+wrapt==2.5.1

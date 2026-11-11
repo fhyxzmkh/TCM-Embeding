@@ -1,0 +1,3 @@
+# After requirements-quantization-lock.txt in .venv-int8.
+# Install with --no-deps to preserve the existing quantization stack.
+ethos-u-vela==5.2.0

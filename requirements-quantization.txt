@@ -1,0 +1,3 @@
+# Install in .venv-int8 with --system-site-packages based on conda common.
+# Reuses the pinned training stack without replacing packages in common.
+tensorflow-cpu==2.20.0
